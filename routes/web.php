@@ -38,3 +38,10 @@ Route::prefix('/')->name('front.')->group(function () {
      Route::view('testimonial', 'front.testimonial')->name('testimonial');
 
 });
+//!------ dashboard Route -----------------------
+
+Route::prefix('/dashboard/')->name('dashboard.')->group(function () {
+    //?------------ index page --------------------
+     Route::view('', 'dashboard.index')->name('index');
+ 
+});
