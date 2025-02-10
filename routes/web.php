@@ -41,7 +41,12 @@ Route::prefix('/')->name('front.')->group(function () {
 //!------ dashboard Route -----------------------
 
 Route::prefix('/dashboard/')->name('dashboard.')->group(function () {
+    Route::middleware('admin')->group(function() {
     //?------------ index page --------------------
-     Route::view('', 'dashboard.index')->name('index');
+    Route::view('', 'dashboard.index')->name('index');
+
+    });
+    //?------------ LOGIN PAGE --------------------
+     Route::view('/login', 'dashboard.auth.login')->middleware('guest:admin')->name('login');
  
 });
