@@ -43,9 +43,14 @@ Route::prefix('/')->name('front.')->group(function () {
 Route::prefix('/dashboard/')->name('dashboard.')->group(function () {
     Route::middleware('admin')->group(function() {
     //?------------ index page --------------------
-    Route::view('', 'dashboard.index')->name('index');
+    Route::view('', 'dashboard.index')->name('index'); 
+    //?------------ settings page --------------------
+    Route::view('settings', 'dashboard.settings.index')->name('settings'); 
+    //?------------ settings page --------------------
+    Route::view('skills', 'dashboard.skills.index')->name('skills'); 
 
-    });
+
+});
     //?------------ LOGIN PAGE --------------------
      Route::view('/login', 'dashboard.auth.login')->middleware('guest:admin')->name('login');
  
