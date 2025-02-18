@@ -19,7 +19,7 @@
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script>
-      document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
         Livewire.hook('morph.updated', (el, component) => {
             const mySuccessAlert = document.querySelector('.my-success-alert');
 
@@ -31,4 +31,17 @@
         });
     });
  
+    window.addEventListener('creatToggleModal', event => {
+    $('#creatModal').modal('toggle');
+})
+    window.addEventListener('editToggleModal', event => {
+    $('#editModal').modal('toggle');
+})
+    window.addEventListener('deleteToggleModal', event => {
+    $('#deleteModal').modal('toggle');
+})
+    window.addEventListener('showToggleModal', event => {
+    $('#showModal').modal('toggle');
+})
+
 </script>

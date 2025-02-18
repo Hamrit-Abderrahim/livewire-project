@@ -14,7 +14,7 @@ class Skill extends Model
      *
      * @var string
      */
-    protected $table = '';
+    protected $table = 'skills';
 
     /**
      * The primary key associated with the table.
